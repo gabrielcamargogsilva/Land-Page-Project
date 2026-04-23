@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    --primary-color: #4F46E5;
+    --secondary-color: #ec4899;
+    --background-color: #fcfaff;
+    --text-color: #2d2d44;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    gap: 40px;
+    background-color: #fcfaff; /* Cor de fundo levemente lilás */
+    font-family: sans-serif;
+}
+
+.welcome-text {
+    flex: 1;
+    max-width: 500px;
+}
+.welcome-text h1 {
+    font-size: 3.5rem;
+    color: #2d2d44;
+    margin-bottom: 20px;
+}
+.welcome-text .highlight {
+    color: #6366f1;
+
+}
+
+
+.menu-desktop {
+    height: 10vh;
+    display: flex;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0px;
+    border: 1px dashed black;
+}
+
+.menu-mobile {
+    display: flex;
+    height: 10vh;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0px;
+}
+
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+.links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 12px;
+    color: #4F46E5;
+}
+
+.text-mobile {
+    display: none;
+}
+
+.icons-menu {
+    display: flex;
+    gap: 20px;
+}
+.icons-menu a {
+    text-decoration: none;
+}
+.icons-menu a img {
+    width: 20px;
+    height: 20px;
+}
+
+.jarro-image {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.alerta {
+    display: none;
+    height: 10px;
+    background-color: rgb(242, 109, 109);
+    color: rgb(117, 26, 26);
+}
+
+.welcome-images-mobile {
+    display: none;
+    position: relative;
+    width: 100%;
+}
+.badge {
+    display: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #4338ca;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: black;
+    border: 2px solid var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Tela mobile */
+@media (max-width: 768px) {
+
+
+    .menu-desktop {
+        display: none;
+    }
+   
+    .welcome{
+        padding: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    .alerta{
+        display: block;
+    }
+    .welcome-text {
+        font-size: 1.5rem;
+    }
+    .welcome-images-mobile {
+        display: flex;
+        margin-top: 40px;
+    }
+    .badge {
+        left: 20px;
+        text-align: left;
+    }
+
+    .welcome-text{
+        text-align: center;
+    }
+    .text-mobile {
+        display: block;
+    }
+
+    .text-desktop {
+        display: none;
+    }
+
+    .welcome-images-desktop {
+        display: none;
+    }
+}
+
+/* Tela Desktop */
+@media (min-width: 769px) and (max-width: 1199.99px) {
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .welcome-images-mobile {
+        display: none;
+    }
+}
+
+/* Tela Extra Large */
+@media (min-width: 1200px) {
+
+    .menu-mobile {
+        display: none;
+    }
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+}
