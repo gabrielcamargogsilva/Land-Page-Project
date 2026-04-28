@@ -1,204 +1,400 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-
-:root{
-    --primary-color: #4F46E5;
-    --secondary-color: #ec4899;
-    --background-color: #fcfaff;
-    --text-color: #2d2d44;
+/* ==========================================
+   VARIÁVEIS GLOBAIS E RESET
+=========================================== */
+:root {
+    --primary-color: #5A4AF4;
+    /* Azul/Roxo principal */
+    --bg-light: #F7F5FA;
+    /* Fundo claro da página */
+    --bg-dark: #120A2B;
+    /* Fundo escuro (Rodapé/Depoimentos) */
+    --text-dark: #1A1A2E;
+    --text-gray: #6B7280;
+    --pink-badge: #FFD1DF;
+    --pink-text: #D81B60;
+    --bg-purple-light: #F3E8FF;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Garante que padding não quebre larguras */
 }
 
-.welcome {
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================================
+   CONFIGURAÇÃO DA REGRA (Desktop oculto por padrão)
+=========================================== */
+.nav-desktop,
+.hero-desktop,
+.philosophy-desktop,
+.products-desktop,
+.footer-desktop {
+    display: none;
+}
+
+/* ==========================================
+   ESTILOS MOBILE (Padrão)
+=========================================== */
+
+/* Nav Mobile */
+.nav-mobile {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 80px 10%;
-    gap: 40px;
-    background-color: #fcfaff; /* Cor de fundo levemente lilás */
-    font-family: sans-serif;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bg-light);
 }
 
-.welcome-text {
-    flex: 1;
-    max-width: 500px;
+.nav-mobile .logo {
+    font-weight: 800;
+    color: var(--primary-color);
 }
-.welcome-text h1 {
-    font-size: 3.5rem;
-    color: #2d2d44;
+
+/* Hero Mobile */
+.hero-mobile {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge-pink {
+    background-color: var(--pink-badge);
+    color: var(--pink-text);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
     margin-bottom: 20px;
 }
-.welcome-text .highlight {
-    color: #6366f1;
 
+.hero-mobile h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
+.highlight-italic {
+    color: var(--primary-color);
+    font-style: italic;
+}
 
-.menu-desktop {
-    height: 10vh;
+.hero-mobile p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.hero-mobile .actions {
     display: flex;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    padding: 10px 0px;
-    border: 1px dashed black;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
-.menu-mobile {
-    display: flex;
-    height: 10vh;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    padding: 10px 0px;
-}
-
-
-.links {
-    display: flex;
-    gap: 20px;
-}
-.links a {
+.btn-primary-mobile {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 16px;
+    border-radius: 30px;
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    font-weight: 700;
 }
 
-.logo {
-    font-size: 12px;
-    color: #4F46E5;
-}
-
-.text-mobile {
-    display: none;
-}
-
-.icons-menu {
-    display: flex;
-    gap: 20px;
-}
-.icons-menu a {
+.btn-secondary-mobile {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid #E0DDF0;
+    padding: 16px;
+    border-radius: 30px;
     text-decoration: none;
-}
-.icons-menu a img {
-    width: 20px;
-    height: 20px;
+    font-weight: 700;
 }
 
-.jarro-image {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-.alerta {
-    display: none;
-    height: 10px;
-    background-color: rgb(242, 109, 109);
-    color: rgb(117, 26, 26);
-}
-
-.welcome-images-mobile {
-    display: none;
+/* Container de Imagem Mobile */
+.image-container {
     position: relative;
     width: 100%;
 }
-.badge {
-    display: none;
+
+.main-img {
+    border-radius: 15px;
+    width: 100%;
 }
 
-.btn-primary {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-}
-.btn-primary:hover {
-    background-color: #4338ca;
-}
-
-.btn-secondary {
-    background-color: white;
-    color: black;
-    border: 2px solid var(--secondary-color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
+.floating-quote {
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 80%;
+    font-size: 0.85rem;
+    font-style: italic;
 }
 
+/* Filosofia Mobile */
+.philosophy-mobile {
+    padding: 80px 20px 40px;
+}
 
-/* Tela mobile */
-@media (max-width: 768px) {
+.title-center {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pink-line {
+    width: 40px;
+    height: 4px;
+    background-color: var(--pink-badge);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.products-mobile {
+    padding: 80px 20px 40px;
+}
 
 
-    .menu-desktop {
-        display: none;
+
+/* ==========================================
+   ESTILOS DESKTOP 
+=========================================== */
+@media (min-width: 1024px) {
+
+    /* 1. Ocultamos TODAS as secções Mobile */
+    .nav-mobile,
+    .hero-mobile,
+    .philosophy-mobile,
+    .products-mobile {
+        display: none !important;
     }
-   
-    .welcome{
-        padding: 0;
-        flex-direction: column;
-        text-align: center;
-    }
-    .alerta{
-        display: block;
-    }
-    .welcome-text {
-        font-size: 1.5rem;
-    }
-    .welcome-images-mobile {
+
+    /* 2. Mostramos as secções Desktop */
+    .nav-desktop {
         display: flex;
-        margin-top: 40px;
-    }
-    .badge {
-        left: 20px;
-        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 5%;
     }
 
-    .welcome-text{
-        text-align: center;
+    .nav-desktop .logo {
+        font-weight: 800;
+        color: var(--primary-color);
+        font-size: 1.2rem;
     }
-    .text-mobile {
+
+    .nav-desktop .links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-desktop .links a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-size: 0.9rem;
+    }
+
+    .nav-desktop .icons {
+        display: flex;
+        gap: 20px;
+    }
+
+    .hero-desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 5%;
+        min-height: 80vh;
+    }
+
+    .hero-text {
+        width: 45%;
+    }
+
+    .hero-text h1 {
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+
+    .highlight-blue {
+        color: var(--primary-color);
+    }
+
+    .hero-text p {
+        color: var(--text-gray);
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+
+    .hero-desktop .actions {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .btn-primary-desktop {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .btn-text {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* O truque das imagens sobrepostas para desktop */
+    .hero-images {
+        position: relative;
+        width: 50%;
+        height: 600px;
+    }
+
+    .img-back {
+        width: 80%;
+        height: 90%;
+        object-fit: cover;
+        border-radius: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .img-front {
+        width: 50%;
+        position: absolute;
+        left: 0;
+        bottom: 5%;
+        border: 10px solid var(--bg-light);
+        /* Borda da cor do fundo para dar efeito de recorte */
+        border-radius: 20px;
+    }
+
+    /* Filosofia Desktop */
+    .philosophy-desktop {
         display: block;
+        padding: 80px 5%;
     }
 
-    .text-desktop {
-        display: none;
+    .philosophy-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 60px;
     }
 
-    .welcome-images-desktop {
-        display: none;
-    }
-}
-
-/* Tela Desktop */
-@media (min-width: 769px) and (max-width: 1199.99px) {
-
-    .menu-mobile {
-        display: none;
+    .small-title {
+        color: var(--pink-text);
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 2px;
     }
 
-    .welcome-images-mobile {
-        display: none;
+    .philosophy-header h2 {
+        font-size: 2.5rem;
+        margin-top: 10px;
     }
-}
 
-/* Tela Extra Large */
-@media (min-width: 1200px) {
+    .philosophy-header .desc {
+        width: 40%;
+        color: var(--text-gray);
+    }
 
-    .menu-mobile {
-        display: none;
+
+    .card-grid {
+        display: flex;
+        gap: 30px;
     }
-    .welcome-text h1 {
-        font-size: 2rem;
+
+    .card-grid .card {
+        flex: 1;
     }
+
+    /* Faz os cards dividirem o espaço igualmente */
+
+
+    .products-desktop {
+        display: block;
+        padding: 80px 5%;
+    }
+
+    .products-header-desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .products-header-desktop h2 {
+        font-size: 2.5rem;
+    }
+
+    .product-cards-desktop {
+        display: flex;
+
+        gap: 30px;
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 500px;
+    }
+
+    .product-info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
 }

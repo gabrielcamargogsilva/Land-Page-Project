@@ -6,115 +6,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Digital Atelier</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-    <nav class="menu">
-        <div class="menu-desktop">
-            <div class="logo">
-                <h1>The Digital Atelier</h1>
-            </div>
+    <nav class="nav-mobile">
+        <div class="menu-icon"><img src="assets/sanduiche.png" alt="Menu" width="24"></div>
+        <div class="logo">The Digital Atelier</div>
+        <div class="cart-icon"><img src="assets/bag.png" alt="Sacola" width="24"></div>
+    </nav>
 
-            <div class="links">
-                <a href="">Collection</a>
-                <a href="">New Arrivals</a>
-                <a href="">Journal</a>
-                <a href="">Our Story</a>
-            </div>
-
-            <div class="icons-menu">
-                <a href="#">
-                    <img src="assets/bag.png" alt="Sacola de Compras">
-                </a>
-
-                <a href="#">
-                    <img src="assets/profile.png" alt="Perfil do Usuário">
-                </a>
-            </div>
+    <nav class="nav-desktop">
+        <div class="logo">The Digital Atelier</div>
+        <div class="links">
+            <a href="#">Collections</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Journal</a>
+            <a href="#">Our Story</a>
         </div>
-
-        <div class="menu-mobile">
-            <div class="menu-sanduiche">
-                <img src="assets/sanduiche.png" alt="Menu">
-            </div>
-            <div class="logo">
-                <h1>The Digital Atelier</h1>
-            </div>
-
-            <div class="buttons">
-                <a href="#">
-                    <img src="assets/bag.png" alt="Sacola de Compras">
-                </a>
-
-            </div>
+        <div class="icons">
+            <a href="#"><img src="assets/bag.png" alt="Sacola" width="20"></a>
+            <a href="#"><img src="assets/profile.png" alt="Perfil" width="20"></a>
         </div>
     </nav>
 
+    <section class="hero-mobile">
+        <span class="badge-pink">NEW COLLECTION 2024</span>
+        <h1>Curated <span class="highlight-italic">Artistry</span> for the Modern Life.</h1>
+        <p>Explore our latest drop of bespoke digital and physical artifacts, designed for those who value
+            intentionality and high-end craftsmanship.</p>
+        <div class="actions">
+            <a href="#" class="btn-primary-mobile">Shop Now</a>
+            <a href="#" class="btn-secondary-mobile">View Lookbook</a>
+        </div>
+        <div class="image-container">
+            <img class="main-img"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8XUV9dapkQa-1IeCpvtb0jQq8UzHC18CE-mjaRWb3T8Kh0Qhto_wh9DtviYgISCNOD-dIWN64-QIaqeTSpTvuWhbEwBuwFV1fEYQNp0BwzAoB5BtuoiJ3iMILofsw9Fuq0jN5XIBPfjp6PgbjHrZdp-ZiLjIw28CMBtk9MJO6OpNVCxu6R_sH97LaaVNTETkxhKcsDuWqVSuQDf7WiY4Tvq24vs2JhRSMUS_bO5gNQKJ6_BtONLZ1hB_LhLYM-fhmBHZYDxCz5mZu"
+                alt="Interior">
+            <div class="floating-quote">
+                <p>"Simply the finest artifacts I've ever encountered."</p>
+                <span>— ARCHITECTURAL DAILY</span>
+            </div>
+        </div>
+    </section>
 
-    <main class="mainContainer">
-        <section class="welcome">
-            <div class="welcome-text">
-                <span class="alerta">New Collection 2024</span>
-                <div class="text-desktop">
-                    <h1>Curated Artistry for the <span class="highlight">Modern Life</span></h1>
-                    <p>Discover a symphony of design and utility. Every piece</p>
+    <section class="hero-desktop">
+        <div class="hero-text">
+            <h1>Curated Artistry for the <span class="highlight-blue">Modern Life</span></h1>
+            <p>Discover a symphony of design and utility. Every piece in our collection is an intentional statement for
+                the discerning aesthetic.</p>
+            <div class="actions">
+                <a href="#" class="btn-primary-desktop">Explore Collection</a>
+                <a href="#" class="btn-text">▶ Watch Film</a>
+            </div>
+        </div>
+        <div class="hero-images">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGUIyDusdM-rEP9AiKDkOqP-mMezHnHXibWO_MIT5rT2xevVjEqpRU6FgzIyeWdUOW6BFnOYihRrC3n_LKnqMO7ekei8lBgnmMd_wl7jCS3iRtdzXH-3zVEEk-pqJoUxBplTv5PxZ49q-_zzaHawpw5rGjAeiUWZSwRhIzoAjB_2BoHekuHsxSQXUfgKTL1Xv1b-dOvDDSDAG2gRkcbqo31ShK0e6iVd0oQRbdk86SwHTtaP67kYrMSaMG_GAop4t-ETQPWrGVc3J1"
+                alt="Living Room" class="img-back">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_N3balj3R5Qy1GsXjyVpTz3ECo-7dtwM6rzpxGC4AOfwkx7FldWHtxxPo7yZ-U5sjitCSC1n_1ZBDG9_7fpMBWth09mU5iNkabqgie30jLDoKTviR5PO9BMhLglc1X3kafLVwmdiV1Aidhb_pksmnwqPVarYlWVHDDsAbV1i2DT2J-EZ69fdiYylmeMIWlq9p4j94rrqXycQya6lzfhbRzFk8Xb5cTqBG7n3InCIBbfn-y3sPSKu5pOySJfUEc9UIENmHWHkr02DN"
+                alt="Vase" class="img-front">
+        </div>
+    </section>
+
+    <section class="philosophy-mobile">
+        <div class="title-center">
+            <h3>The Atelier Standard</h3>
+            <div class="pink-line"></div>
+        </div>
+
+        <div class="card-list">
+            <div class="card">
+                <div class="icon-circle">✔️</div>
+                <h4>Artisan Verified</h4>
+                <p>Every item in our collection is hand-vetted by our global team of curators...</p>
+            </div>
+            <div class="card">
+                <div class="icon-circle">🍃</div>
+                <h4>Sustainable Flow</h4>
+                <p>We prioritize carbon-neutral shipping and ethical production cycles...</p>
+            </div>
+            <div class="card">
+                <div class="icon-circle">⚡</div>
+                <h4>Global Priority</h4>
+                <p>Swift, white-glove delivery to over 45 countries...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy-desktop">
+        <div class="philosophy-header">
+            <div>
+                <span class="small-title">THE PHILOSOPHY</span>
+                <h2>The Atelier Standard</h2>
+            </div>
+            <p class="desc">Defined by three pillars of uncompromising excellence in digital and physical craft.</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="icon-circle">✔️</div>
+                <h4>Artisan Verified</h4>
+                <p>Each piece is individually inspected and certified...</p>
+            </div>
+            <div class="card">
+                <div class="icon-circle">🍃</div>
+                <h4>Sustainable Flow</h4>
+                <p>Conscious sourcing and ethical production cycles...</p>
+            </div>
+            <div class="card">
+                <div class="icon-circle">🌍</div>
+                <h4>Global Priority</h4>
+                <p>White-glove delivery to any corner of the globe...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-mobile">
+        <div class="products-header-mobile">
+            <h2>Featured Drops</h2>
+            <a href="#" class="view-all">View All Collections &rarr;</a>
+        </div>
+
+        <div class="product-list-mobile">
+            <div class="product-card">
+                <div class="product-img-box bg-purple-light">
+                    <img src="assets/watch.png" alt="Atelier Chrono Silver">
                 </div>
-                <div class="text-mobile">
-                    <h1>Curated <span class="highlight">Artistry</span> for the Modern Life</h1>
-                    <p>Explore our latest drop of bespoke digital and physical artifacts, designed for those who value
-                        intentionality and high-end craftsmanship</p>
+                <div class="product-info">
+                    <span class="name">Atelier Chrono Silver</span>
+                    <span class="price">$380</span>
                 </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-box bg-dark">
+                    <img src="assets/lamp.png" alt="Obscura Desk Lamp">
+                </div>
+                <div class="product-info">
+                    <span class="name">Obscura Desk Lamp</span>
+                    <span class="price">$240</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="actions">
+    <section class="products-desktop">
+        <div class="products-header-desktop">
+            <h2>Featured Drops</h2>
+            <a href="#" class="view-all">View All Collections &rarr;</a>
+        </div>
 
-                    <a href="" class="btn-primary">Explore Collection</a>
-                    <a href="" class="btn-secondary">Watch Film</a>
+        <div class="product-cards-desktop">
+            <div class="product-card">
+                <div class="">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKgdthZ1q1R4UCHorJgsD5JJ_qTsfuCyBR0VmEJPzv1b0J9nZN-BUUlzupOITeQzmKLovaMuYs_y-e5Sk_PGVbyE-gfvljr5Q7osTTHxis4p-Wrk2v8dfeHIqQEo_wE6GpHlzC3mxAJQvZqVCmmiB5VwMHC2xiPZdEbOy4d4m22lJD0Z4DNQM0y1SeJmfFcJ21tzX73HvDUUNjqeqSjxHBKK_MT_tg3SBr7326kBdvl7B9uO2K6kus0sCHqurexh1LNga_x6Ux4sAL"
+                        alt="Atelier Chrono Silver">
+                </div>
+                <div class="product-info">
+                    <span class="name">Atelier Chrono Silver</span>
+                    <span class="price">$380</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-box bg-dark">
+                    <img src="assets/lamp.png" alt="Obscura Desk Lamp">
+                </div>
+                <div class="product-info">
+                    <span class="name">Obscura Desk Lamp</span>
+                    <span class="price">$240</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-box bg-gray">
+                    <img src="assets/chair.png" alt="Nordic Lounge Chair">
+                </div>
+                <div class="product-info">
+                    <span class="name">Nordic Lounge Chair</span>
+                    <span class="price">$850</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-box bg-gray">
+                    <img src="assets/chair.png" alt="Nordic Lounge Chair">
+                </div>
+                <div class="product-info">
+                    <span class="name">Nordic Lounge Chair</span>
+                    <span class="price">$850</span>
                 </div>
             </div>
 
-            <!-- Imagem para desktop -->
-            <div class="welcome-images-desktop">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGUIyDusdM-rEP9AiKDkOqP-mMezHnHXibWO_MIT5rT2xevVjEqpRU6FgzIyeWdUOW6BFnOYihRrC3n_LKnqMO7ekei8lBgnmMd_wl7jCS3iRtdzXH-3zVEEk-pqJoUxBplTv5PxZ49q-_zzaHawpw5rGjAeiUWZSwRhIzoAjB_2BoHekuHsxSQXUfgKTL1Xv1b-dOvDDSDAG2gRkcbqo31ShK0e6iVd0oQRbdk86SwHTtaP67kYrMSaMG_GAop4t-ETQPWrGVc3J1" alt="Imagem de Boas-Vindas">
-
-                <div class="jarro-image">
-
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_N3balj3R5Qy1GsXjyVpTz3ECo-7dtwM6rzpxGC4AOfwkx7FldWHtxxPo7yZ-U5sjitCSC1n_1ZBDG9_7fpMBWth09mU5iNkabqgie30jLDoKTviR5PO9BMhLglc1X3kafLVwmdiV1Aidhb_pksmnwqPVarYlWVHDDsAbV1i2DT2J-EZ69fdiYylmeMIWlq9p4j94rrqXycQya6lzfhbRzFk8Xb5cTqBG7n3InCIBbfn-y3sPSKu5pOySJfUEc9UIENmHWHkr02DN" alt="Segunda imagem">
-                </div>
-            </div>
-
-            <!-- Imagem para mobile -->
-            <div class="welcome-images-mobile">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8XUV9dapkQa-1IeCpvtb0jQq8UzHC18CE-mjaRWb3T8Kh0Qhto_wh9DtviYgISCNOD-dIWN64-QIaqeTSpTvuWhbEwBuwFV1fEYQNp0BwzAoB5BtuoiJ3iMILofsw9Fuq0jN5XIBPfjp6PgbjHrZdp-ZiLjIw28CMBtk9MJO6OpNVCxu6R_sH97LaaVNTETkxhKcsDuWqVSuQDf7WiY4Tvq24vs2JhRSMUS_bO5gNQKJ6_BtONLZ1hB_LhLYM-fhmBHZYDxCz5mZu" alt="imagem 1">
-                <div class="badge">
-                    <p>"Simply the finest artifacts I've ever encountered</p>
-                    <span>- ARCHITECTURAL DAILY</span>
-                </div>
-            </div>
+        </div>
+    </section>
 
 
-        </section>
-
-        <!-- Seção de informações -->
-        <section class="badges-info">
-            <div class="title">
-                <h3>The Philosophy</h3>
-                <h1>The Atelier Standard</h1>
-            </div>
-
-            <p>Defined by three pillars of uncompromising excellence in digital and physical craft.</p>
-
-        </section>
-
-        <!-- Seção de cards -->
-        <section class="cards">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
-    </main>
 
 </body>
 
