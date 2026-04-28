@@ -3,16 +3,30 @@
 =========================================== */
 :root {
     --primary-color: #5A4AF4;
-    /* Azul/Roxo principal */
     --bg-light: #F7F5FA;
-    /* Fundo claro da página */
     --bg-dark: #120A2B;
-    /* Fundo escuro (Rodapé/Depoimentos) */
     --text-dark: #1A1A2E;
     --text-gray: #6B7280;
-    --pink-badge: #FFD1DF;
-    --pink-text: #D81B60;
+    --pink-badge: #c9a2ae;
+    --badge-text: #5f2b49;
+    --pink-text: #d44278;
     --bg-purple-light: #F3E8FF;
+
+}
+
+/* Cores de fundo específicas da imagem */
+.bg-teal {
+    background-color: #2D4A47;
+}
+
+/* Fundo do primeiro card */
+.bg-white {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+}
+
+.bg-black {
+    background-color: #000000;
 }
 
 * {
@@ -40,6 +54,8 @@ img {
 .hero-desktop,
 .philosophy-desktop,
 .products-desktop,
+.coments-desktop,
+.newsletter-desktop,
 .footer-desktop {
     display: none;
 }
@@ -73,7 +89,7 @@ img {
 
 .badge-pink {
     background-color: var(--pink-badge);
-    color: var(--pink-text);
+    color: var(--badge-text);
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -193,8 +209,313 @@ img {
     margin-bottom: 15px;
 }
 
+/* Container Principal */
 .products-mobile {
-    padding: 80px 20px 40px;
+    padding: 60px 20px;
+    background-color: var(--bg-light);
+}
+
+/* Cabeçalho Flex: Título à esquerda, Link à direita */
+.products-header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.products-header-mobile h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+}
+
+.products-header-mobile p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.shop-all-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+/* Lista de Cards */
+.product-list-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Wrapper da Imagem com cantos arredondados */
+.product-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    /* Proporção levemente vertical */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.product-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que a ilustração preencha o espaço */
+}
+
+
+
+/* Detalhes do Texto */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.category-label {
+    color: var(--text-gray);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.category-label-pink {
+    color: var(--pink-text);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.product-nome {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.product-preco {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+/* ==========================================
+   SECTION: COMMENTS MOBILE
+=========================================== */
+.comments-mobile {
+    padding: 60px 20px;
+    background-color: var(--bg-light);
+    /* Fundo lilás bem clarinho */
+}
+
+.comments-mobile .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo do Card Branco */
+.comment-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Sombra suave */
+    position: relative;
+}
+
+/* Estrelas Pink */
+.stars {
+    color: var(--pink-text);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.comment-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* Layout do Perfil (Avatar + Texto) */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* Foto perfeitamente redonda */
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.user-role {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-gray);
+    letter-spacing: 1px;
+}
+/* ==========================================
+   SECTION: NEWSLETTER MOBILE
+=========================================== */
+.newsletter-mobile {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+.newsletter-mobile h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.newsletter-mobile p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form input {
+    padding: 18px 25px;
+    border-radius: 40px;
+    border: 1px solid #fff; /* Fundo branco limpo */
+    background: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-subscribe {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 18px;
+    border-radius: 40px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.privacy-note {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--text-gray);
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+}
+
+/* ==========================================
+   SECTION: FOOTER MOBILE
+=========================================== */
+.footer-mobile {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 60px 20px 120px; /* Padding extra em baixo para o botão flutuante */
+}
+
+.footer-brand-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-brand-section p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.footer-links-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.link-group h4 {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.link-group a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Botão Flutuante (Quick Shop) */
+.quick-shop-container {
+    position: flex;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    z-index: 100;
+}
+
+.btn-quick-shop {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    max-width: 350px;
+    padding: 16px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 
@@ -202,17 +523,20 @@ img {
 /* ==========================================
    ESTILOS DESKTOP 
 =========================================== */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 
-    /* 1. Ocultamos TODAS as secções Mobile */
+
     .nav-mobile,
     .hero-mobile,
     .philosophy-mobile,
-    .products-mobile {
+    .products-mobile,
+    .comments-mobile,
+    .newsletter-mobile,
+    .footer-mobile {
         display: none !important;
     }
 
-    /* 2. Mostramos as secções Desktop */
+
     .nav-desktop {
         display: flex;
         justify-content: space-between;
@@ -359,7 +683,7 @@ img {
         flex: 1;
     }
 
-    /* Faz os cards dividirem o espaço igualmente */
+    /* Produtos Desktop */
 
 
     .products-desktop {
@@ -380,7 +704,6 @@ img {
 
     .product-cards-desktop {
         display: flex;
-
         gap: 30px;
     }
 
@@ -394,6 +717,248 @@ img {
     .product-info {
         display: flex;
         justify-content: space-between;
+    }
+
+    .view-all {
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+
+    .image-container {
+        position: relative;
+
+    }
+
+    .badge-limited {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: var(--pink-text);
+        border-radius: 20px;
+        color: white;
+        padding: 5px 12px;
+    }
+
+    .image-container img {
+
+        border-radius: 20px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5 rem;
+    }
+
+    .text p {
+        color: gray;
+        font-size: 14px;
+    }
+
+    .preco {
+        color: var(--primary-color);
+    }
+
+
+    .coments-desktop {
+        display: block;
+        padding: 80px 5%;
+        color: white;
+    }
+
+    .bloco {
+        display: flex;
+        flex-direction: column;
+        min-height: 500px;
+        max-width: 100%;
+        border-radius: 20px;
+        text-align: start;
+        background-color: var(--bg-dark);
+        padding: 40px;
+    }
+
+    .bloco h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        display: block;
+
+    }
+
+    .comentarios {
+        display: flex;
+        gap: 30px;
+        margin-top: 40px;
+        justify-content: space-around;
+    }
+
+    .comentario {
+        flex: 1;
+        font-style: italic;
+        font-size: 1.1rem;
+        margin: 30px 20px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .comentario img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .comentario p {
+        color: white;
+        font-style: italic;
+        display: block;
+
+    }
+
+    .perfil {
+        display: flex;
+        justify-content: start;
+        gap: 30px;
+        padding-top: 100px;
+
+
+    }
+
+    .perfil img {
+        justify-content: start;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .perfil-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2px;
+    }
+
+    .perfil-info p {
+        color: #a3bffa;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+
+    .newsletter-desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 120px 5%;
+        background-color: #F9F8FF; /* Tom lilás claríssimo da imagem */
+        text-align: center;
+    }
+
+    .newsletter-container {
+        max-width: 800px;
+    }
+
+    .exclusives-tag {
+        color: var(--primary-color);
+        font-size: 0.7rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .newsletter-desktop h2 {
+        font-size: 3.5rem;
+        color: var(--text-dark);
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+    }
+
+    .newsletter-desktop p {
+        font-size: 1.1rem;
+        color: var(--text-gray);
+        max-width: 600px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
+    }
+
+    /* O design do "Pill" (cápsula) */
+    .subscribe-form-desktop {
+        display: flex;
+        background-color: #EFECFF; /* Cor de fundo do campo */
+        padding: 8px;
+        border-radius: 50px;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    .subscribe-form-desktop input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        padding: 0 25px;
+        font-size: 1rem;
+        outline: none;
+        color: var(--text-dark);
+    }
+
+    .subscribe-form-desktop button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 40px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: opacity 0.2s;
+    }
+
+    .subscribe-form-desktop button:hover {
+        opacity: 0.9;
+    }
+
+    /* --- Footer Desktop --- */
+    .footer-desktop {
+        display: block; /* Garante que aparece no desktop */
+        background-color: #050507; /* Fundo quase preto da imagem */
+        color: white;
+        padding: 60px 5%;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-logo {
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .copyright {
+        font-size: 0.7rem;
+        color: #666;
+        letter-spacing: 1px;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .footer-links a {
+        color: #999;
+        text-decoration: none;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+        color: white;
     }
 
 
